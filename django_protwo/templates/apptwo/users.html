@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" style="background-color:#333">
+    <!-- Navbar content -->
+        <div class="container">
+
+            <a class="navbar-brand"style="color: white" href="#">Be My Contact!</a>
+            <a class="nav-item nav-link active" style="color: white" href="{% url 'apptwo:index'%}">Home </a>
+            <a class="nav-item nav-link disabled" href="#">Sign Up<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" style="color: white" href="{% url 'admin:index'%}">Admin</a>
+
+
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <h5 style="margin-top: 1rem;">Add your name and email here.</h5>
+      <form class="" method="post">
+          {{form.as_p}}
+          {% csrf_token%}
+          <input type="submit" class="btn btn-primary" name="" value="Submit">
+      </form>
+    </div>
+
+
+    <div class="container">
+      {%if users%}
+      <ol>
+        {%for person in users%}
+        <li>User Info</li>
+          <ul>
+            <li>First Name: {{person.first_name}} </li>
+            <li>Last Name: {{person.last_name}}</li>
+            <li>Email: {{person.email}}</li>
+          </ul>
+        {%endfor%}
+      </ol>
+      {%endif%}
+    </div>
+
+  </body>
+</html>

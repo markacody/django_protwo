@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" style="background-color:#333">
+    <!-- Navbar content -->
+        <div class="container">
+          <a class="navbar-brand" style="color: white" href="#">Be My Contact!</a>
+
+            <a class="nav-item nav-link disabled" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" style="color: white" href="{% url 'apptwo:users'%}">Sign Up</a>
+            <a class="nav-item nav-link active" style="color: white" href="{% url 'admin:index'%}">Admin</a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+
+          <h5 style="margin-top:1rem;">Welcome</h5>
+          <p>Go to the users page to sign up.</p>
+
+    </div>
+
+  </body>
+</html>
