@@ -25,7 +25,7 @@ SECRET_KEY = '$$-x!pn8x(y1gd6q+ed9zsq1d((^s8pzdapnc%%2a76wjw)aq-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['markacody.pythonanywhere.com']
 
 
 # Application definition
